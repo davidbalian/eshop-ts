@@ -1,0 +1,13 @@
+.navlink p,
+.navlink a {
+	text-transform: capitalize;
+	color: var(--main-color);
+}
+
+.navlink p {
+	cursor: pointer;
+}
+
+.navsublinks {
+	display: none;
+}

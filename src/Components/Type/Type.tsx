@@ -3,9 +3,9 @@ import { useParams } from "react-router-dom";
 import "./Type.css";
 
 const Type = () => {
-	let { type } = useParams();
+	const { type } = useParams();
 
-	return <div>Ehe type is {type}</div>;
+	return <div>{type}</div>;
 };
 
 export default Type;

@@ -29,6 +29,7 @@ const Navbar = () => {
 					<Navlink
 						title={categories[0]}
 						types={fruitTypes}
+						cat={"fruits"}
 						open={openNavbar}
 						setOpen={setOpenNavbar}
 					/>
@@ -39,6 +40,7 @@ const Navbar = () => {
 						title={categories[1]}
 						types={vegetableTypes}
 						open={openNavbar}
+						cat={"vegetables"}
 						setOpen={setOpenNavbar}
 					/>
 					<ArrowRight className='icon' />

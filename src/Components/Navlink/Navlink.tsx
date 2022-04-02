@@ -5,36 +5,35 @@ import "./Navlink.css";
 interface NavlinkProps {
 	title: string;
 	types: Array<String>;
+	cat: string;
 	open: boolean;
 	setOpen: any;
 }
 
-const Navlink = ({ title, types, open, setOpen }: NavlinkProps) => {
-	const [display, setDisplay] = useState("none");
+const Navlink = ({ title, types, cat, open, setOpen }: NavlinkProps) => {
+	const [display, setDisplay] = useState(false);
 
 	return (
 		<div
 			className='navlink'
 			onClick={() => {
-				setDisplay(display === "none" ? "flex" : "none");
+				setDisplay(!display);
 			}}
 		>
 			<p>{title}</p>
-			{open ? (
-				<div
-					className='navsublinks'
-					style={{ display: display }}
-					onClick={() => {
-						setOpen(false);
-					}}
-				>
-					{types.map((singleType) => (
-						<Link to={`/${singleType}`} className='navsublink'>
-							{singleType}
-						</Link>
-					))}
-				</div>
-			) : null}
+			<div
+				className='navsublinks'
+				style={{ display: display && open ? "flex" : "none" }}
+				onClick={() => {
+					setOpen(false);
+				}}
+			>
+				{types.map((singleType) => (
+					<Link to={`/products/${cat}/${singleType}`} className='navsublink'>
+						{singleType}
+					</Link>
+				))}
+			</div>
 		</div>
 	);
 };

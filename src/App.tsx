@@ -1,8 +1,8 @@
 import React from "react";
-import { Type } from "react-feather";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./Components/Home/Home";
 import Navbar from "./Components/Navbar/Navbar";
+import Type from "./Components/Type/Type";
 
 const App = () => {
 	return (
@@ -11,8 +11,8 @@ const App = () => {
 				<Navbar />
 				<div className='content'>
 					<Routes>
+						<Route path='/products/:category/:type' element={<Type />} />
 						<Route path='/' element={<Home />} />
-						<Route path='/:type' element={<Type />} />
 					</Routes>
 				</div>
 			</Router>

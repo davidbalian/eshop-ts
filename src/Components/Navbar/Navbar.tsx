@@ -33,7 +33,7 @@ const Navbar = () => {
 						open={openNavbar}
 						setOpen={setOpenNavbar}
 					/>
-					<ArrowRight className='icon' />
+					<ArrowRight className='icon-dark icon icon-small' />
 				</div>
 				<div className='navlink-and-icon'>
 					<Navlink
@@ -43,12 +43,14 @@ const Navbar = () => {
 						cat={"vegetables"}
 						setOpen={setOpenNavbar}
 					/>
-					<ArrowRight className='icon' />
+					<ArrowRight className='icon-dark icon icon-small' />
 				</div>
 			</div>
-			<h1 className='logo'>Buddy David's</h1>
+			<Link to='/'>
+				<h1 className='logo'>Buddy David's</h1>
+			</Link>
 			<Link to='/cart'>
-				<ShoppingCart className='icon' />
+				<ShoppingCart className='icon-light icon' />
 			</Link>
 		</div>
 	);

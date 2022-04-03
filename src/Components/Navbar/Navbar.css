@@ -12,8 +12,7 @@
 	background-color: var(--main-color);
 }
 
-.logo,
-.icon {
+.logo {
 	color: var(--neutral-color);
 }
 
@@ -78,7 +77,7 @@
 	gap: 1rem;
 }
 
-.navlink-and-icon .icon {
+.icon-small {
 	color: var(--main-color);
 	width: var(--body-text-size);
 	height: var(--body-text-size);

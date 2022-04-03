@@ -23,6 +23,13 @@
 h1 {
 	font-family: var(--heading-font);
 	letter-spacing: -2px;
+	color: var(--main-color);
+}
+
+h2 {
+	font-family: var(--heading-font);
+	letter-spacing: -1px;
+	color: var(--main-color);
 }
 
 p,
@@ -37,4 +44,16 @@ a {
 
 .content {
 	margin-top: 3.5rem;
+}
+
+.icon-dark {
+	color: var(--main-color);
+}
+
+.icon-light {
+	color: var(--neutral-color);
+}
+
+.icon {
+	cursor: pointer;
 }
